@@ -1,4 +1,5 @@
-FROM python:3.9-slim
+# Changed from 3.9 to 3.11-slim to fix the deprecation error
+FROM python:3.11-slim
 
 # Install FFmpeg (Crucial for yt-dlp to merge video and audio)
 RUN apt-get update && \

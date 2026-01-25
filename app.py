@@ -40,7 +40,7 @@ def get_video_info(url):
     ydl_opts = {
         'quiet': True,
         'no_warnings': True,
-        # Using specific user agent to avoid bot detection
+        'cookiefile': 'cookies.txt',  # <--- ADDED: Uses your uploaded cookies.txt
         'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
     }
     try:
@@ -124,6 +124,7 @@ def download_video():
         'outtmpl': output_path,
         'merge_output_format': 'mp4',
         'quiet': True,
+        'cookiefile': 'cookies.txt',  # <--- ADDED: Uses your uploaded cookies.txt here too
     }
 
     try:
